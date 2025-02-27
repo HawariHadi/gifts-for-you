@@ -1,0 +1,706 @@
+
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gifts For You - Din premiumbutik för presenter och blommor i Göteborg. Personliga presenter med snabb leverans. Handplockade presentlådor för alla tillfällen.">
+    <meta name="keywords" content="presenter, blommor, göteborg, gåvor, presentbutik, blomsteraffär, presentlådor, personliga presenter, födelsedagspresenter, romantiska presenter">
+    <meta name="author" content="Gifts For You">
+    <meta property="og:title" content="Gifts for You | Presenter och Blommor i Göteborg">
+    <meta property="og:description" content="Specialdesignade presenter och blomsterarrangemang med leverans i Göteborg. Handplockade presentlådor för alla tillfällen.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpeg">
+    <meta property="og:url" content="https://giftsforyou.se">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3498db">
+    <link rel="canonical" href="https://giftsforyou.se">
+    <title>Gifts for You | Presenter och Blommor i Göteborg - Personliga Presentlådor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%) !important;
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .navbar-brand.logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #3498db, #ecf0f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand.logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            color: #ecf0f1 !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #f1c40f !important;
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #3498db, #FFB6C1);
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #f1c40f !important;
+        }
+
+        .shadow-hover {
+            transition: box-shadow 0.3s ease;
+        }
+
+        .shadow-hover:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+        }
+
+        /* Enhanced responsive styles */
+        @media (max-width: 576px) {
+            .hero {
+                padding: 2rem 0.75rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero .d-flex {
+                flex-direction: column;
+            }
+            
+            .hero .btn {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+
+            .navbar-brand.logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (min-width: 577px) and (max-width: 767px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .products .col-md-4 {
+                width: 50%;
+            }
+            
+            .testimonials .col-md-4 {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand.logo {
+                font-size: 1.8rem;
+            }
+            
+            .nav-link {
+                margin: 0.5rem 0;
+            }
+
+            .cta h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Faster loading images */
+        img {
+            content-visibility: auto;
+        }
+
+        /* Improved accessibility */
+        .btn:focus, .nav-link:focus {
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a href="index.html" class="navbar-brand logo" aria-label="Gifts For You Home">
+                    Gifts<span>For</span>You
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" aria-current="page">Hem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="services.html" class="nav-link">Tjänster</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Kontakta oss</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Enhanced Hero Section -->
+        <section class="hero position-relative text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold mb-4">Välkommen till Gifts for You</h1>
+                        <p class="lead mb-4">Vi skapar magiska presenter för alla dina speciella tillfällen!</p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                            <a href="services.html" class="btn btn-light btn-lg">Våra Tjänster</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg">Kontakta Oss</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                        <img src="images/hero.jpeg" alt="Exklusiva presentlådor från Gifts For You" class="img-fluid rounded-3 shadow-lg" width="600" height="400" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features py-5 bg-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-card text-center p-4 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-gift text-primary mb-3" style="font-size: 2.5rem;"></i>
+                            <h3 class="h4 mb-3">Unika Presenter</h3>
+                            <p>Skräddarsydda presentlösningar för varje tillfälle och person.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-card text-center p-4 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-truck text-primary mb-3" style="font-size: 2.5rem;"></i>
+                            <h3 class="h4 mb-3">Snabb Leverans</h3>
+                            <p>Leverans inom Göteborg så snabbt som möjligt vid beställning</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="feature-card text-center p-4 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-heart text-primary mb-3" style="font-size: 2.5rem;"></i>
+                            <h3 class="h4 mb-3">100% Nöjd Garanti</h3>
+                            <p>Din tillfredsställelse är vår högsta prioritet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Product Section -->
+        <section class="products py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Populära Presentlådor</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use.jpeg" alt="Presentlåda Deluxe med handplockade godsaker" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-3">Populär</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Presentlåda Deluxe</h3>
+                                <p class="text-muted mb-3">Lyxig presentlåda med handplockade godsaker och färska blommor.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">799 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use2.jpeg" alt="Romantisk presentlåda med rosor och choklad" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Romantisk Presentlåda</h3>
+                                <p class="text-muted mb-3">Perfekt för romantiska tillfällen med rosor och choklad.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">250 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use5.jpeg" alt="Lyxig presentlåda med champagne och tillbehör" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Champagne Surprise</h3>
+                                <p class="text-muted mb-3">Lyxig presentlåda med champagne och utsökta tillbehör för speciella tillfällen.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">499 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use4.jpeg" alt="Vänskapslåda med personliga detaljer" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Vänskapslåda</h3>
+                                <p class="text-muted mb-3">En perfekt gåva för att visa uppskattning till en speciell vän.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">249 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use6.jpeg" alt="Jubileum presentlåda för speciella firanden" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Jubileum Låda</h3>
+                                <p class="text-muted mb-3">Fira kärlek och gemenskap med en genomtänkt låda fylld med gåvor för att markera ett speciellt jubileum.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">249 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use37.jpg" alt="Krya på dig presentlåda med vårdande produkter" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Krya På Dig Låda</h3>
+                                <p class="text-muted mb-3">En tröstande presentlåda för att lysa upp någon dag och få dem att må bättre med lugnande godsaker och vårdprodukter.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">899 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use8.jpeg" alt="Baby presentlåda med söta babyartiklar" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Baby Presentlåda</h3>
+                                <p class="text-muted mb-3">En perfekt present för att fira ankomsten av en ny baby, med söta babyartiklar och minnessaker.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">2499 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use9.jpeg" alt="Lyxig kärlekslåda med champagne och choklad" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Kärlekslåda Deluxe</h3>
+                                <p class="text-muted mb-3">Vår mest exklusiva romantiska låda med champagne, rosor och handgjorda praliner.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">599 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/WhatsApp Image 2025-01-28 at 19..jpg" alt="Mors dags presentlåda med lyxiga produkter" class="img-fluid rounded-top" width="400" height="300">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Mors Dags Låda</h3>
+                                <p class="text-muted mb-3">Visa din kärlek och uppskattning för mamma med en låda fylld med avslappnande saker och sentimentala skatter.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">249 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use36.jpg" alt="Tack presentlåda för att visa uppskattning" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Tack Presentlåda</h3>
+                                <p class="text-muted mb-3">En vackert kuraterad låda för att uttrycka din tacksamhet, fylld med härliga saker för att visa uppskattning.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">799 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use30.jpg" alt="Baby shower presentlåda för väntande föräldrar" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Baby Shower Presentlåda</h3>
+                                <p class="text-muted mb-3">Fira ankomsten av en ny baby med en noggrant utvald samling av babyprodukter och minnessaker</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">799 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use31.jpg" alt="Lyxig baby shower presentlåda med premium produkter" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Baby Shower Deluxe</h3>
+                                <p class="text-muted mb-3">Fira ankomsten av en ny baby med en noggrant utvald samling av premium babyprodukter och minnessaker.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">899 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use33.jpg" alt="Exklusiv romantisk presentlåda med champagne" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Romantisk Afton</h3>
+                                <p class="text-muted mb-3">Skapa en perfekt romantisk kväll med denna exklusiva presentlåda med champagne och lyxiga godsaker.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">899 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use35.jpg" alt="Premium romantisk presentlåda med rosor" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Kärlekens Låda</h3>
+                                <p class="text-muted mb-3">Vår mest exklusiva kärlekslåda med röda rosor, champagne och handgjorda chokladpraliner.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">999 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="product-card border rounded-3 shadow-hover h-100">
+                            <div class="position-relative">
+                                <img src="images/use17.jpg" alt="Födelsedagslåda med festliga tillbehör" class="img-fluid rounded-top" width="400" height="300">
+                                <span class="badge bg-primary position-absolute top-0 end-0 m-3">Ny</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="h4 mb-3">Födelsedag Överraskning</h3>
+                                <p class="text-muted mb-3">En särskild presentlåda för att göra någon födelsedag extra minnesvärd med personliga godsaker och delikatesser.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">599 kr</span>
+                                    <a href="contact.html" class="btn btn-outline-primary">Beställ Nu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="testimonials py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Vad våra kunder säger</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Fantastisk service och underbara presenter. Kommer definitivt beställa igen!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Zainab Ali</h5>
+                                    <small class="text-muted">Göteborg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Snabb leverans och utmärkt kvalitet på alla produkter. Rekommenderar starkt!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Maryam khalilson</h5>
+                                    <small class="text-muted">Stockholm</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Personlig service som överträffade mina förväntningar. Mycket nöjd med mitt köp!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Maria Andersson</h5>
+                                    <small class="text-muted">Malmö</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Stort utbud och enkelt att handla. Presenterna var perfekt inslagna och levererades i tid."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Lars Nilsson</h5>
+                                    <small class="text-muted">Uppsala</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Bästa presentbutiken online! Alltid hittar jag något unikt och prisvärt. Toppservice!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Karin Bergström</h5>
+                                    <small class="text-muted">Västerås</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="testimonial-card bg-white p-4 rounded-3 shadow-sm">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Otroligt hjälpsam kundtjänst och snabb leverans. Kvaliteten på produkterna är outstanding!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <h5 class="mb-0">Johan Eklund</h5>
+                                    <small class="text-muted">Linköping</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta py-5" style="background: linear-gradient(135deg, #3498db, #FFB6C1);">
+            <div class="container text-center text-white">
+                <h2 class="mb-4">Redo att beställa din perfekta present?</h2>
+                <p class="lead mb-4">Kontakta oss idag för att diskutera dina önskemål!</p>
+                <a href="contact.html" class="btn btn-light btn-lg px-4">Kontakta Oss Nu</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer bg-custom text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="mb-3">Kontakta Oss</h5>
+                    <p class="mb-1"><i class="fas fa-envelope me-2"></i>info.giftsforyou424@gmail.com</p>
+            
+                    <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> Göteborg, Sverige</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5 class="mb-3">Följ Oss</h5>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/giftsforyou_gbg" class="text-white me-3">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@giftsforyou_gbg" class="text-white">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <p>&copy; 2025 Gifts for You.<br>Alla rättigheter förbehållna.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
